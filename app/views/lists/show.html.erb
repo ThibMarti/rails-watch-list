@@ -1,0 +1,23 @@
+<h2>here are the details fo the <%= @list.name %> movie list</h2>
+
+<h4>movies:</h4>
+
+<% @list.movies.each do |movie| %>
+  <div class="card">
+    <p>
+      <%= movie.title %>, <%= movie.overview %>
+    </p>
+
+    <p>
+      rating: <%= movie.rating %>
+    </p>
+
+    <img src="<%= movie.poster_url %>" alt="" height="400" width="200">
+
+  </div>
+<% end %>
+
+<%#= link_to "add a movie to this list",  %>
+
+
+<%= link_to "back to all lists", lists_path %>
